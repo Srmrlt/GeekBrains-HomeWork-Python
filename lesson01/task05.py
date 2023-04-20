@@ -7,4 +7,4 @@ else:
     print(f'Profit this month: {revenue}')
     employee_num = int(input(f'Enter number of employees: '))
     revenue_employee = revenue / employee_num
-    print(f'Profit per employee this month: {revenue_employee}')
+    print(f'Profit per employee this month: {revenue_employee:.2f}')
