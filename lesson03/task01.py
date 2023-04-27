@@ -1,10 +1,13 @@
-def div():
+def div(dividend, divider):
+
+    if divider == 0:
+        return 'Division by zero!!!'
+    return round(dividend / divider, 2)
+
+
+try:
     arg_1 = float(input('Enter dividend: '))
     arg_2 = float(input('Enter divider: '))
-    if arg_2 == 0:
-        print('Division by zero!!!')
-        return
-    return arg_1 / arg_2
-
-
-print(f'{div():.2f}')
+    print(f'{div(arg_1, arg_2)}')
+except ValueError:
+    print('Value Error')
