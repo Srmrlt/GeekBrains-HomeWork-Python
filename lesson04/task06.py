@@ -1,17 +1,21 @@
-from sys import argv
 from itertools import count
 from itertools import cycle
 
-script_name = argv
-for el in count(3):
-    if el > 10:
-        break
-    else:
+
+def int_gen(start, stop):
+    for el in count(start):
+        if el > stop:
+            break
         print(el)
 
-fruits = ['apple', 'banana', 'orange', 'pineapple', 'mango', 'grape', 'kiwi', 'watermelon', 'pear']
-for el in cycle(fruits):
-    if input('q for exit: ') == 'q':
-        break
-    else:
+
+def list_repeater():
+    fruits = ['apple', 'banana', 'orange', 'pineapple', 'mango', 'grape', 'kiwi', 'watermelon', 'pear']
+    for el in cycle(fruits):
+        if input('q for exit: ') == 'q':
+            break
         print(el)
+
+
+int_gen(3, 6)
+list_repeater()
