@@ -1,4 +1,8 @@
 from sys import argv
-script_name, hour, salary, benefit = argv
-total = (int(hour) * int(salary)) + int(benefit)
-print(total)
+
+try:
+    hour, salary, benefit = map(int, argv[1:])
+    total = (hour * salary + benefit)
+    print(total)
+except ValueError:
+    print('Incorrect values')
